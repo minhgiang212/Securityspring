@@ -17,7 +17,7 @@ public class SecurityConfig {
 
         http.cors().disable().csrf().disable();
         http.authorizeRequests().requestMatchers("/Users/login").permitAll();
-        http.authorizeRequests().requestMatchers("/Users/**").hasRole("admin");
+        http.authorizeRequests().requestMatchers("/Users/getAll").hasRole("admin");
 
 
 
